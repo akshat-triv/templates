@@ -1,0 +1,112 @@
+@mixin navigation {
+    
+    nav{
+        box-shadow: 0 .3rem 1rem rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: #fff;
+    }
+    .logo{
+        width: 8rem;
+        height: 8rem;
+        background-image: url(img/logo.png);
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+        padding: 2rem;
+        margin: 0 2.8rem 0 4rem; 
+    }
+    &_menu,&_mytab{
+        list-style: none;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-top: -6.5rem;}
+
+        &_menu{
+        &_items{
+            display: inline-block;
+            padding: 0 1rem;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+    &_mytab{
+        margin-top: unset;
+        font-size: 1.2rem;
+        text-transform: unset;
+        text-align: center;
+        &_items{
+            display: inline-block;
+            padding: 0 1rem;
+        }
+    }
+    
+    .float_right{
+        float: right;
+        transform: translate(-2rem,2.2rem);
+    }
+    
+    .search{
+        display: inline-block;
+        margin-right: 4rem;
+    
+        &_field{
+            height: 4rem;
+            width: 35rem;
+            outline: none;
+            border: none;
+            background-color: #f7f7f7;
+            padding: 0 1rem;
+            color: gray;
+    
+            &:focus{
+                outline: 1px solid #e9e8e8;
+                background-color: #fff;
+            }
+        }
+    }
+    
+    &_icons{
+        font-size: 2.2rem;
+        display: block;
+        margin-bottom: -1.3rem;
+        text-align: center;
+    }
+    
+}
+
+/*Navigation's markup
+
+        <nav>
+            <div class="logo"></div>
+            <ul class="header_menu">
+                <li class="header_menu_items">Men</li>
+                <li class="header_menu_items">Women</li>
+                <li class="header_menu_items">Kids</li>
+                <li class="header_menu_items">Home & Living</li>
+                <li class="header_menu_items">Discover</li>
+            </ul>
+
+            <div class="float_right">
+                <form action="#" class="search"><input type="text" class="search_field" placeholder="Search for products, brand and more"/></form>
+                <ul class="header_mytab">
+                    <li class="header_mytab_items"><i class="ion-android-person header_icons"></i>Profile</li>
+                    <li class="header_mytab_items"><i class="ion-android-favorite-outline header_icons"></i>Wishlist</li>
+                    <li class="header_mytab_items"><i class="ion-bag header_icons"></i>Bag</li>
+                </ul>
+            </div>
+            
+        </nav>
+
+*/

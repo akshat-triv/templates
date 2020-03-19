@@ -1,0 +1,129 @@
+
+// Slider is optimised for 4 divisions
+
+@mixin slider{
+    .wrapper{
+        width: 120rem;
+        height: 35rem;
+        margin: 6rem auto;
+        margin-top: 13rem;
+        //border: 1px solid orangered;
+        overflow: hidden;
+
+        &_inside{
+            height: 35rem;
+            width: 480rem;
+            animation: slider 35s ease-out;
+            animation-iteration-count: infinite;
+            transition: all .2s;
+            transform: translateX(0);
+        }
+
+        &_container{
+            width: 120rem;
+            height: 100%;
+            position: relative;
+            float: left;
+
+            &_image{
+
+                &-1{
+                    background-image: url(./img/bg.jpg);
+                    width: 75%;
+                    height: 100%;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &-2{
+                    background-image: url(./img/bg2.jpg);
+                    width: 75%;
+                    height: 100%;
+                    background-position: top;
+                    background-size: cover;
+                }
+                &-3{
+                    background-image: url(./img/bg3.jpg);
+                    width: 75%;
+                    height: 100%;
+                    background-position: bottom;
+                    background-size: cover;
+                }
+                &-4{
+                    background-image: url(./img/bg4.jpg);
+                    width: 75%;
+                    height: 100%;
+                    background-position: top;
+                    background-size: cover;
+                }
+            }
+
+            &_textbox{
+                width: 35%;
+                height: 85%;
+                background-color: #fff;
+                position: absolute;
+                box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+                top: 50%;
+                right: -20rem;
+                transform: translate(-50%,-50%);
+                padding: 4rem;
+
+                h3{
+                    font-size: 3.5rem;
+                    margin-bottom: 6rem;
+                }
+
+            }
+        }
+    }
+}
+
+@keyframes slider{
+    0%{
+        transform:translateX(0rem);
+    }
+
+    25%{
+        transform:translateX(0rem);
+    }
+
+    26%{
+        transform:translateX(-120rem);
+    }
+
+    52.5%{
+        transform:translateX(-120rem);
+    }
+
+    53.5%{
+        transform:translateX(-240rem);
+    }
+
+    80%{
+        transform:translateX(-240rem);
+    }
+
+    81%{
+        transform:translateX(-360rem);
+    }
+
+    100%{
+        transform:translateX(-360rem);
+    }
+
+}
+
+/*
+<div class="wrapper">
+    <div class="wrapper_inside">
+       <div class="wrapper_container">
+            <div class="wrapper_container_image-1"></div>
+            <div class="wrapper_container_textbox">
+                <h3>Lorem Ipsum is big</h3>   
+                <h4>Sale : 30% off</h4>
+                <h5>+ Explore</h5>
+            </div>
+        </div>
+    </div>
+</div>
+*/

@@ -1,0 +1,46 @@
+.image_style{
+
+    h4{
+        padding: 3rem 1.5rem;
+        margin-bottom: 0;
+    }
+
+    h5{
+        padding: 2rem 1.5rem;
+        font-weight: 300;
+        display: inline-block;
+
+        &:first-of-type{
+            text-transform: uppercase;
+        }
+    }
+
+    &-1{
+        background-image: linear-gradient(to right, rgba(0,0,0,0.8),transparent),url(img/img1.jpg);
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+    }
+
+    &-2{
+        background-image: linear-gradient(to right, rgba(0,0,0,0.8),transparent),url(img/img2.jpg);
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+    }
+
+    &-3{
+        background-image: linear-gradient(to right, rgba(0,0,0,0.8),transparent),url(img/img3.jpg);
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+    }
+
+    &-4{
+        background-image: linear-gradient(to right, rgba(0,0,0,0.8),transparent),url(img/img4.jpg);
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+    }
+
+}
